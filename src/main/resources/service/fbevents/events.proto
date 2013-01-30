@@ -1,0 +1,15 @@
+package eu.trentorise.smartcampus.services.fb.events.data.message;
+
+import "core.proto";
+
+message Event {
+	required string id = 1;
+	required string name = 2;
+	required string owner = 3;
+	optional string location = 4;
+	optional int64 start_time = 5;
+	optional int64 end_time = 6;
+	optional string description = 7;
+	optional it.sayservice.platform.core.message.POI poi = 8;
+}
+

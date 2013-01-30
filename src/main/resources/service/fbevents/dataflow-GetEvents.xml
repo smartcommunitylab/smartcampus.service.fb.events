@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataflow xmlns="http://www.example.org/mml-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/mml-schema mml-schema.xsd ">
+
+	<input name="source" type="String" />
+	<input name="token" type="String" />
+	<input name="overrideLocation" type="String" />
+	
+	<variable name="eventMsg" type="eu.trentorise.smartcampus.services.fb.events.data.message.Events.Event" />
+	<variable name="events" type="String" />
+	<variable name="eventDescr" type="String" />
+	<variable name="eventIds" type="java.util.List&lt;String&gt;" />
+	<variable name="eventsList" type="java.util.List&lt;Message&gt;" />
+	
+	<variable name="geolocalizedEvent" type="Message" />
+	
+	<httpConnector name="fbConnector" method="GET" encoding="ISO-8859-1"/>
+
+	<connect name="c1" connector="fbConnector" outputVar="events" transformer="string">
+		<properties>
+			<property name="url">
+				<value>"https://graph.facebook.com/" + source + "/events/call?access_token=" + token</value>
+			</property>
+		</properties>
+	</connect>
+	
+	<script outputVar="eventIds">
+		<className>eu.trentorise.smartcampus.services.fb.events.scripts.FBEventsScript</className>
+		<method>extractId</method>
+		<variables>
+			<value>events</value>
+		</variables>
+	</script>	
+	
+	<foreach name="fe1" item="eventId" itemClass="String" 
+		aggregateVariable="evs" outputVar="output" writeAction="append" writeMethod="addAll">
+		<items>eventIds</items>		
+		
+	<connect name="c2" connector="fbConnector" outputVar="eventDescr" transformer="string">
+		<properties>
+			<property name="url">
+				<value>"https://graph.facebook.com/" + eventId + "?access_token=" + token</value>
+			</property>
+		</properties>
+	</connect>		
+	
+	<script outputVar="eventMsg" onError="continue">
+		<className>eu.trentorise.smartcampus.services.fb.events.scripts.FBEventsScript</className>
+		<method>getEvent</method>
+		<variables>
+			<value>eventDescr</value>
+			<value>overrideLocation</value>
+		</variables>
+	</script>	
+	
+	<geolocalize outputVar="evs" inputVar="eventMsg" writeAction="append" attribute="poi" onError="continue">
+       	<poiName>eventMsg.getLocation()</poiName>
+    </geolocalize>			
+	
+	<!-- 
+	<merge outputVar="evs" writeAction="append" initOutput="false">
+		<in>eventMsg</in>
+	</merge>
+	 -->	
+		
+
+	</foreach>		
+	
+		
+	
+	<!-- 
+	<script outputVar="eventsList">
+		<className>eu.trentorise.smartcampus.services.fb.events.scripts.FBEventsScript</className>
+		<method>getEvents</method>
+		<variables>
+			<value>events</value>
+		</variables>
+	</script>	
+	
+	<foreach name="fe2" item="event" itemClass="eu.trentorise.smartcampus.services.fb.events.data.message.Events.Event" 
+		aggregateVariable="events" outputVar="output" writeAction="append" writeMethod="addAll">
+		<items>eventsList</items>		
+		
+		<geolocalize outputVar="events" inputVar="event" writeAction="append" attribute="poi" onError="continue">
+        	<poiName>event.getLocation()</poiName>
+      	</geolocalize>		
+		
+	</foreach>	
+	 -->
+
+</dataflow>
