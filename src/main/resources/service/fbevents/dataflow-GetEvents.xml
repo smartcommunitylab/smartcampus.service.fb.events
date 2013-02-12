@@ -18,7 +18,7 @@
 	<connect name="c1" connector="fbConnector" outputVar="events" transformer="string">
 		<properties>
 			<property name="url">
-				<value>"https://graph.facebook.com/" + source + "/events/call?access_token=" + token</value>
+				<value>"https://graph.facebook.com/" + source + "/events?access_token=" + token</value>
 			</property>
 		</properties>
 	</connect>
