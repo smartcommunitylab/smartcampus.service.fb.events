@@ -1,12 +1,12 @@
-Flambard Pub@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;;46.050066;11.131129;0;WGS84;ITA;Italy;TN;Trento;38123;viale degli Olmi 4;en;spettacolo
-Officina Gambrinus@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;;46.127906;11.109264;0;WGS84;ITA;Italy;TN;Trento;38121;via Alto Adige 164/B;en;spettacolo
-OSTERIA TRENTINA@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;;46.069555;11.11987;0;WGS84;ITA;Italy;TN;Trento;38122;via Roma 48;en;spettacolo
-Café de la Paix Trento@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;;46.070788;11.125308;0;WGS84;ITA;Italy;TN;Trento;38122;passaggio Teatro Osele;en;spettacolo
-Via S. Maria Maddalena,9, 38122 Trento@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;;46.068569;11.125495;0;WGS84;ITA;Italy;TN;Trento;38122;via S. Maria Maddalena;en;spettacolo
-Osteria La Scaletta@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;;46.068569;11.125495;0;WGS84;ITA;Italy;TN;Trento;38122;via S. Maria Maddalena;en;spettacolo
-FBK@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;;46.06744;11.150587;0;WGS84;ITA;Italy;TN;Trento;38123;via Sommarive 18 Povo;en;spettacolo
-PIAZZA FIERA TRENTO@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;;46.06524;11.12336;0;WGS84;ITA;Italy;TN;Trento;38122;piazza di Fiera;en;spettacolo
-Al Porteghet@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;;46.071509;11.124419;0;WGS84;ITA;Italy;TN;Trento;38122;Passaggio Dorigoni 3;en;spettacolo
-La Libreria Erickson@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;;46.108334;11.106797;0;WGS84;ITA;Italy;TN;Trento;38122;via del Pioppeto 24;en;spettacolo
+Flambard Pub@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;Flambard Pub@eu.trentorise.smartcampus.services.pois.ServicesPois;;;;;;;;;;;;
+Officina Gambrinus@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;Officina Gambrinus@eu.trentorise.smartcampus.services.pois.ServicesPois;;;;;;;;;;;;
+OSTERIA TRENTINA@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;OSTERIA TRENTINA@eu.trentorise.smartcampus.services.pois.ServicesPois;;;;;;;;;;;;
+Café de la Paix Trento@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;Café de la Paix Trento@eu.trentorise.smartcampus.services.pois.ServicesPois;;;;;;;;;;;;
+Via S. Maria Maddalena,9, 38122 Trento@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;Osteria La Scaletta@eu.trentorise.smartcampus.services.pois.ServicesPois;;;;;;;;;;;;
+Osteria La Scaletta@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;Osteria La Scaletta@eu.trentorise.smartcampus.services.pois.ServicesPois;;;;;;;;;;;;
+FBK@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;FBK@eu.trentorise.smartcampus.services.pois.ServicesPois;;;;;;;;;;;;
+PIAZZA FIERA TRENTO@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;PIAZZA FIERA TRENTO@eu.trentorise.smartcampus.services.pois.ServicesPois;;;;;;;;;;;;
+Al Porteghet@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;Al Porteghet@eu.trentorise.smartcampus.services.pois.ServicesPois;;;;;;;;;;;;
+La Libreria Erickson@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;La Libreria Erickson@eu.trentorise.smartcampus.services.pois.ServicesPois;;;;;;;;;;;;
 Bookique@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;Bookique@eu.trentorise.smartcampus.services.pois.ServicesPois;;;;;;;;;;;;
 Piazza Duomo ore 17 e Café de la Paix ore 19@eu.trentorise.smartcampus.services.fb.events.FacebookEvents;smart;Trento Centro Storico@eu.trentorise.smartcampus.services.pois.ServicesPois;;;;;;;;;;;;
