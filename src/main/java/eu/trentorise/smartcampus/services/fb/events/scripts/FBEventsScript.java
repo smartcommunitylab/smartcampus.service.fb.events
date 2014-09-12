@@ -18,7 +18,6 @@ package eu.trentorise.smartcampus.services.fb.events.scripts;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -85,7 +84,7 @@ public class FBEventsScript {
 	}	
 	
 	private String cleanString(String s) {
-		return s.replaceAll("[^\\p{Graph}^\\p{Space}]", "");
+		return s;
 	}
 	
 	private String replaceLocation(String location, String override) {
