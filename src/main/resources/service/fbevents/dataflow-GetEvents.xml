@@ -43,7 +43,8 @@
 		</properties>
 	</connect>		
 	
-	<script outputVar="eventMsg" onError="continue">
+<!-- 	<script outputVar="eventMsg" onError="continue"> -->
+	<script outputVar="evs" writeAction="append" onError="continue">
 		<className>eu.trentorise.smartcampus.services.fb.events.scripts.FBEventsScript</className>
 		<method>getEvent</method>
 		<variables>
@@ -52,9 +53,9 @@
 		</variables>
 	</script>	
 	
-	<geolocalize outputVar="evs" inputVar="eventMsg" writeAction="append" attribute="poi" onError="continue">
-       	<poiName>eventMsg.getLocation()</poiName>
-    </geolocalize>			
+<!-- 	<geolocalize outputVar="evs" inputVar="eventMsg" writeAction="append" attribute="poi" onError="continue"> -->
+<!--        	<poiName>eventMsg.getLocation()</poiName> -->
+<!--     </geolocalize>			 -->
 	
 	<!-- 
 	<merge outputVar="evs" writeAction="append" initOutput="false">
