@@ -15,9 +15,10 @@
      limitations under the License.
 -->
 <persistenceConfiguration serviceURI="eu.trentorise.smartcampus.services.fb.events.FacebookEvents"
-	operation="GetEvents" xmlns="http://www.example.org/persistence-schema"
+	operation="GetEvents" 
+	xmlns="http://smart.sayservice.it/schema/persistence-schema"	
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.example.org/persistence-schema ../persistence-schema.xsd ">
+  	xsi:schemaLocation="http://smart.sayservice.it/schema/persistence-schema http://smart.sayservice.it/schema/persistence-schema-1.7.xsd">
 	<!-- USE default values -->
 	<persistence tableName="PrimiAllaPrima" />
 </persistenceConfiguration>

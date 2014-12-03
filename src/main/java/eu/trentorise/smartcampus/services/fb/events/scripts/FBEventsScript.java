@@ -23,10 +23,9 @@ import java.util.List;
 
 import javax.xml.datatype.DatatypeConfigurationException;
 
-import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.node.ArrayNode;
-
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.google.protobuf.Message;
 
 import eu.trentorise.smartcampus.services.fb.events.data.message.Events.Event;
@@ -42,10 +41,10 @@ public class FBEventsScript {
 		JsonNode rootNode;
 		rootNode = m.readValue(events, JsonNode.class);
 		ArrayNode arrayNode = (ArrayNode) rootNode.get("data");
-		Iterator<JsonNode> elements = arrayNode.getElements();
+		Iterator<JsonNode> elements = arrayNode.elements();
 		while (elements.hasNext()) {
 			JsonNode node = elements.next();
-			result.add(node.path("id").getTextValue());
+			result.add(node.path("id").textValue());
 		}
 		
 		return result;
@@ -56,22 +55,22 @@ public class FBEventsScript {
 		ObjectMapper m = new ObjectMapper();
 		JsonNode node;
 		node = m.readValue(events, JsonNode.class);
-		builder.setId(node.path("id").getTextValue());
-		builder.setName(node.path("name").getTextValue());
+		builder.setId(node.path("id").textValue());
+		builder.setName(node.path("name").textValue());
 		String location = "";
 		if (node.has("location")) {
-				location = replaceLocation(node.path("location").getTextValue(), override);
+				location = replaceLocation(node.path("location").textValue(), override);
 		}
 		builder.setLocation(location);
 		if (node.has("description")) {
-			builder.setDescription(cleanString(node.path("description").getTextValue()));
+			builder.setDescription(cleanString(node.path("description").textValue()));
 		}
-		boolean dateOnly = node.path("is_date_only").getBooleanValue();
-		builder.setStartTime(convertTime(node.path("start_time").getTextValue(), dateOnly));
+		boolean dateOnly = node.path("is_date_only").booleanValue();
+		builder.setStartTime(convertTime(node.path("start_time").textValue(), dateOnly));
 		if (node.has("end_time")) {
-			builder.setEndTime(convertTime(node.path("end_time").getTextValue(), dateOnly));
+			builder.setEndTime(convertTime(node.path("end_time").textValue(), dateOnly));
 		}
-		builder.setOwner(node.get("owner").path("name").getTextValue());
+		builder.setOwner(node.get("owner").path("name").textValue());
 		return builder.build();
 	}
 
