@@ -24,7 +24,7 @@ public class TestDataFlow extends TestCase {
 		DataFlowTestHelper helper = new DataFlowTestHelper("test");
 		Map<String,Object> map = new HashMap<String, Object>();
 		map.put("source", "280474468734649");
-		map.put("token", "411456108942681%7Cvl7s-g-4Szf4qEDByvc_mjjsiWM");
+		map.put("token", "");
 		map.put("overrideLocation", ".+=Osteria La Scaletta");
 		Map<String, Object> out = helper.executeDataFlow(
 				"eu.trentorise.smartcampus.services.fb.events.FacebookEvents", 
@@ -38,7 +38,7 @@ public class TestDataFlow extends TestCase {
 	public void testRemote() throws InvocationException {
 		Map<String,Object> map = new HashMap<String, Object>();
 		map.put("source", "280474468734649");
-		map.put("token", "411456108942681%7Cvl7s-g-4Szf4qEDByvc_mjjsiWM");
+		map.put("token", "");
 		map.put("overrideLocation", ".+=Osteria La Scaletta");
 
 		ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://localhost:61616");
